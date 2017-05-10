@@ -1,0 +1,53 @@
+<div class="sidebar" data-color="purple" data-image="/app/views/assets/img/sidebar-1.jpg">
+
+    <div class="logo">
+        <img src="/app/views/assets/img/logof.png" alt="logo" height="45" width="230">
+    </div>
+
+    <div class="sidebar-wrapper">
+        <ul class="nav" ng-controller="sidebarController">
+            <li ng-class="{ active: isCurrentPath('/home') }">
+                <a href='/home'>
+                    <i class="material-icons">home</i>
+                    <p>Home</p>
+                </a>
+            </li>
+            <li ng-class="{ active: isCurrentPath('/register_drugs') }"> 
+                <a href="/register_drugs" >
+                    <i class="material-icons">assignment</i>
+                    <p>Register Drugs</p>
+                </a>
+            </li>
+            <li >
+                <a href="">
+                    <i class="material-icons">system_update_alt</i>
+                    <p>Update Drugs</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="material-icons">library_books</i>
+                    <p>Add Drugs</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="material-icons">bubble_chart</i>
+                    <p>Add New Batch</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="material-icons">location_on</i>
+                    <p>View Requests</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="material-icons text-gray">notifications</i>
+                    <p>Reports</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

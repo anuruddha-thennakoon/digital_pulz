@@ -1,0 +1,24 @@
+{
+  "name": "pharmacy_module",
+  "version": "1.0.0",
+  "description": "pharmacy module for HIS/SLIIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuruddha-thennakoon/pharmacy_module.git"
+  },
+  "author": "ANURUDDHA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anuruddha-thennakoon/pharmacy_module/issues"
+  },
+  "homepage": "https://github.com/anuruddha-thennakoon/pharmacy_module#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "express": "^4.15.2"
+  }
+}
