@@ -1,7 +1,7 @@
 <div class="sidebar" data-color="purple" data-image="/app/views/assets/img/sidebar-1.jpg">
 
     <div class="logo">
-        <img src="/app/views/assets/img/logof.png" alt="logo" height="45" width="230">
+        <a href='/home'> <img src="/app/views/assets/img/logof.png" alt="logo" height="45" width="230"></a>
     </div>
 
     <div class="sidebar-wrapper">
@@ -12,13 +12,13 @@
                     <p>Home</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/register_drugs') }"> 
-                <a href="/register_drugs" >
+            <li ng-class="{ active: isCurrentPath('/register_drugs') }">
+                <a href="/register_drugs">
                     <i class="material-icons">assignment</i>
                     <p>Register Drugs</p>
                 </a>
             </li>
-            <li >
+            <li>
                 <a href="">
                     <i class="material-icons">system_update_alt</i>
                     <p>Update Drugs</p>
