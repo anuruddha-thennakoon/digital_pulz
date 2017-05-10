@@ -1,4 +1,4 @@
-# pharmacy_module
+# digital_pulz
 This is an angular based application for pharmacies.That meets the general requirements of pharmacies in sri lanka.
 
 # Run
