@@ -6,7 +6,7 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
 
         // route for the home page
-        .when('/home', {
+        .when('/', {
             templateUrl: 'app/views/components/home.html',
             controller: 'homeController'
         })
@@ -15,10 +15,4 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/register_drugs.html',
             controller: 'registerDrugsController'
         })
-
-    $locationProvider.hashPrefix('');
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
 });

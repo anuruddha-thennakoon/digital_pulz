@@ -6,7 +6,7 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
         var pageUrl = $location.path().substring(1);
 
         var pageTitleItems = {
-            home: "Home",
+            '': "Home",
             register_drugs: "Register Drugs",
             editprofile: "Edit Profile"
         };
