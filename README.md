@@ -6,4 +6,4 @@ This is an angular based application for pharmacies.That meets the general requi
 npm install
 npm start
 ```
-Runs an express server on port 3000 (http://localhost:3000/home)
+Runs an express server on port 3000 (http://localhost:3000/)
