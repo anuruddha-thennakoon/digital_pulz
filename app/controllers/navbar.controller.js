@@ -8,7 +8,11 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
         var pageTitleItems = {
             '': "Home",
             register_drugs: "Register Drugs",
-            editprofile: "Edit Profile"
+            editprofile: "Edit Profile",
+            reports: "Generate Reports",
+            add_supplier : "Add Supplier",
+            view_requests : "View Requests"
+
         };
 
         $scope.pageTitle = pageTitleItems[pageUrl];

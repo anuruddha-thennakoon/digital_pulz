@@ -36,16 +36,22 @@
                     <p>Add New Batch</p>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <i class="material-icons">location_on</i>
+            <li ng-class="{ active: isCurrentPath('/view_requests')}"}>
+                <a href="#!/view_requests">
+                    <i class="material-icons">remove_red_eye</i>
                     <p>View Requests</p>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <i class="material-icons text-gray">notifications</i>
+            <li  ng-class="{ active: isCurrentPath('/reports') }"}>
+                <a href="#!/reports">
+                    <i class="material-icons text-gray">content_paste</i>
                     <p>Reports</p>
+                </a>
+            </li>
+            <li ng-class="{ active: isCurrentPath('/add_supplier') }">
+                <a href="#!/add_supplier">
+                    <i class="material-icons">group_add</i>
+                    <p>Add Supplier</p>
                 </a>
             </li>
         </ul>

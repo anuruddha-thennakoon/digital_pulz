@@ -15,4 +15,16 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/register_drugs.html',
             controller: 'registerDrugsController'
         })
+        .when('/add_supplier', {
+            templateUrl: 'app/views/components/add_supplier.html',
+            controller: ''
+        })
+        .when('/reports', {
+            templateUrl: 'app/views/components/reports.html',
+            controller: ''
+        })
+        .when('/view_requests', {
+            templateUrl: 'app/views/components/view_requests.html',
+            controller: ''
+        })
 });
