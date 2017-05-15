@@ -1,0 +1,16 @@
+.border{
+    border-style: solid;
+    border-width: 1px;
+    width: 250px;
+}
+select{
+	width:400px;
+	height:40px;
+	}
+	
+	
+	
+button{
+	
+	border-radius:5px;
+	}
