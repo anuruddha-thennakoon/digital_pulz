@@ -1,5 +1,4 @@
 // create the controller for navbar
-
 pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
     $scope.$watch(function () { return $location.path(); }, function (newValue, oldValue) {
 
@@ -7,12 +6,12 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
 
         var pageTitleItems = {
             '': "Home",
-            register_drugs: "Register Drugs",
-            editprofile: "Edit Profile",
+            add_drugs: "Add Drugs",
+            update_drugs: "Update Drugs",
+            add_batch: "Add Batch",
             reports: "Generate Reports",
             add_supplier : "Add Supplier",
             view_requests : "View Requests"
-
         };
 
         $scope.pageTitle = pageTitleItems[pageUrl];

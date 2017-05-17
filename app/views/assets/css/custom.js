@@ -7,10 +7,14 @@ export default StyleSheet.create({
     'width': [{ 'unit': 'px', 'value': 250 }]
   },
   'select': {
-    'width': [{ 'unit': 'px', 'value': 400 }],
+    'width': [{ 'unit': '%H', 'value': 1 }],
     'height': [{ 'unit': 'px', 'value': 40 }]
   },
-  'button': {
-    'borderRadius': '5px'
+  'text-prop': {
+    'paddingTop': [{ 'unit': 'px', 'value': 10 }],
+    'paddingRight': [{ 'unit': 'px', 'value': 10 }]
+  },
+  'space': {
+    'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }]
   }
 });
