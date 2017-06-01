@@ -1,0 +1,43 @@
+<div class="row" ng-controller="userController">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header" data-background-color="purple">
+                <h4 class="title">Users</h4>
+            </div>
+            <div class="card-content">
+
+                <div class="w3-row w3-section" ng-controller="userController">
+                    <div class="w3-col w3-quarter text-prop">First Name</div>
+                    <div class="w3-rest" ng-model="firstName">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="First Name">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section" ng-controller="userController">
+                    <div class="w3-col w3-quarter text-prop">Last Name</div>
+                    <div class="w3-rest" ng-model="lastName">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="text-align: right">
+                        <button class="w3-btn w3-green" ng-click="addUser()">Add User</button>
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-quarter text-prop">Users List from database</div>
+                    <div class="w3-rest">
+                        <select>
+                <option ng-repeat="user in user">{{user.firstName + " "+ user.lastName}}</option>
+                </select>
+                    </div>
+                </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
