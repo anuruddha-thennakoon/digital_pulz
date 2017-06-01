@@ -36,4 +36,8 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/view_requests.html',
             controller: ''
         })
+        .when('/user', {
+            templateUrl: 'app/views/components/user.html',
+            controller: ''
+        })
 });
