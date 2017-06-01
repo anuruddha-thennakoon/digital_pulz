@@ -3,6 +3,8 @@ This is an angular based application for pharmacies.That meets the general requi
 
 # Run
 ```
+mongod
+
 npm install
 npm start
 ```

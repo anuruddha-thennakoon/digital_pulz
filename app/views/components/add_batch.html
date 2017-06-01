@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header" data-background-color="purple">
 				<h4 class="title">Add New Batch</h4>
@@ -33,12 +33,7 @@
 						</div>
 					</div>
 
-					<div class="w3-row w3-section">
-						<div class="w3-col w3-quarter text-prop">Batch Number</div>
-						<div class="w3-rest">
-							<input class="w3-input w3-border" name="batch_number" type="text" placeholder="Batch Number">
-						</div>
-					</div>
+					<div class="space"></div>
 
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Type</div>
@@ -52,7 +47,7 @@
 						</div>
 					</div>
 
-<div class="space"></div>
+					<div class="space"></div>
 
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Content</div>
@@ -63,6 +58,13 @@
                 <option>3</option>
                 <option>4</option>
                 </select>
+						</div>
+					</div>
+
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Batch Number</div>
+						<div class="w3-col w3-third">
+							<input class="w3-input w3-border" name="batch_number" type="text" placeholder="Batch Number">
 						</div>
 					</div>
 
@@ -93,9 +95,56 @@
 						</div>
 					</div>
 
-					
+
 
 				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="card-header" data-background-color="purple">
+				<h4 class="title">View Batch</h4>
+				<p class="category">Search Batch Information</p>
+			</div>
+			<div class="card-content">
+				<form class="w3-container">
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Search</div>
+						<div class="w3-rest">
+							<input class="w3-input w3-border" name="qty" type="text" placeholder="Search">
+						</div>
+					</div>
+				</form>
+
+				<div class="w3-container">
+					<table class="w3-table w3-striped">
+						<tr>
+							<th>Batch No</th>
+							<th>Drug Category</th>
+							<th>Drug Name</th>
+						</tr>
+						<tr>
+							<td>Jill</td>
+							<td>Smith</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Eve</td>
+							<td>Jackson</td>
+							<td>94</td>
+						</tr>
+						<tr>
+							<td>Adam</td>
+							<td>Johnson</td>
+							<td>67</td>
+						</tr>
+					</table>
+				</div>
 
 			</div>
 		</div>
