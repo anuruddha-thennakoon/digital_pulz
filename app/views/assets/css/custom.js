@@ -11,10 +11,12 @@ export default StyleSheet.create({
     'height': [{ 'unit': 'px', 'value': 40 }]
   },
   'text-prop': {
-    'paddingTop': [{ 'unit': 'px', 'value': 10 }],
     'paddingRight': [{ 'unit': 'px', 'value': 10 }]
   },
   'space': {
     'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }]
+  },
+  'text-height': {
+    'height': [{ 'unit': 'px', 'value': 30 }]
   }
 });

@@ -10,10 +10,13 @@ select{
 }
 
 .text-prop{
-    padding-top: 10px;
     padding-right: 10px; 
 }
 
 .space{
     padding: 10px;
+}
+
+.text-height{
+    height: 30px;
 }

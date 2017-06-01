@@ -13,16 +13,16 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
         // route for the add drugs
         .when('/add_drugs', {
             templateUrl: 'app/views/components/add_drugs.html',
-            controller: 'addDrugsController'
+            controller: ''
         })
         // route for the register drugs page
         .when('/update_drugs', {
             templateUrl: 'app/views/components/update_drugs.html',
-            controller: 'updateDrugsController'
+            controller: ''
         })
         .when('/add_batch', {
             templateUrl: 'app/views/components/add_batch.html',
-            controller: 'addBatchController'
+            controller: ''
         })
         .when('/add_supplier', {
             templateUrl: 'app/views/components/add_supplier.html',
