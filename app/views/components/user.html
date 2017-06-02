@@ -6,17 +6,17 @@
             </div>
             <div class="card-content">
 
-                <div class="w3-row w3-section" ng-controller="userController">
+                <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">First Name</div>
-                    <div class="w3-rest" ng-model="firstName">
-                        <input class="w3-input w3-border" name="qty" type="text" placeholder="First Name">
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="First Name"  ng-model="newUser.firstName">
                     </div>
                 </div>
 
-                <div class="w3-row w3-section" ng-controller="userController">
+                <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Last Name</div>
-                    <div class="w3-rest" ng-model="lastName">
-                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Last Name">
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Last Name" ng-model="newUser.lastName">
                     </div>
                 </div>
 

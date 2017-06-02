@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 //model for users
 const UserModel = require('../models/user.model');
 
-//services for usere
+//services for users
 app.get('/users', (req, res) => {
     UserModel.find().exec().then(users => {
         res.json(users);
@@ -56,5 +56,10 @@ app.delete('/users/:id', (req, res) => {
         res.sendStatus(500);
     });
 });
+
+
+//create other services here(create seperate model for corresponding services under models folder)
+//sachini
+//bhagyani
 
 module.exports = app;
