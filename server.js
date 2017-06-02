@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/SampleServices', err => {
+mongoose.connect('mongodb://localhost:27017/digital_pulz', err => {
     if (err) {
         console.log(err);
         process.exit(1);
