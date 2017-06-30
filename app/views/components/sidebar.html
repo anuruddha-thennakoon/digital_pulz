@@ -6,49 +6,49 @@
 
     <div class="sidebar-wrapper">
         <ul class="nav" ng-controller="sidebarController">
-            <li ng-class="{ active: isCurrentPath('/') }">
+            <li ng-class="{ active: isCurrentPath('/') }"  ng-show="model.data.userRole=='chief'">
                 <a href='#!/'>
                     <i class="material-icons">home</i>
                     <p>Home</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/add_drugs') }">
+            <li ng-class="{ active: isCurrentPath('/add_drugs') }" ng-show="model.data.userRole=='chief'">
                 <a href="#!/add_drugs">
                     <i class="material-icons">add_shopping_cart</i>
                     <p>Add Drugs</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/update_drugs') }">
+            <li ng-class="{ active: isCurrentPath('/update_drugs') }" ng-show="model.data.userRole=='chief'">
                 <a href="#!/update_drugs">
                     <i class="material-icons">update</i>
                     <p>Update Drugs</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/add_batch') }">
+            <li ng-class="{ active: isCurrentPath('/add_batch') }" ng-show="model.data.userRole=='chief'">
                 <a href="#!/add_batch">
                     <i class="material-icons">library_add</i>
                     <p>Add New Batch</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/view_requests')}"}>
+            <li ng-class="{ active: isCurrentPath('/view_requests')}"} ng-show="model.data.userRole=='chief'">
                 <a href="#!/view_requests">
                     <i class="material-icons">remove_red_eye</i>
                     <p>View Requests</p>
                 </a>
             </li>
-            <li  ng-class="{ active: isCurrentPath('/reports') }"}>
+            <li  ng-class="{ active: isCurrentPath('/reports') }"} ng-show="model.data.userRole=='chief'">
                 <a href="#!/reports">
                     <i class="material-icons text-gray">content_paste</i>
                     <p>Reports</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/add_supplier') }">
+            <li ng-class="{ active: isCurrentPath('/add_supplier') }" ng-show="model.data.userRole=='chief'">
                 <a href="#!/add_supplier">
                     <i class="material-icons">group_add</i>
                     <p>Add Supplier</p>
                 </a>
             </li>
-            <li ng-class="{ active: isCurrentPath('/user') }">
+            <li ng-class="{ active: isCurrentPath('/user') }" ng-show="model.data.userRole=='doctor'">
                 <a href="#!/user">
                     <i class="material-icons">group</i>
                     <p>User</p>
