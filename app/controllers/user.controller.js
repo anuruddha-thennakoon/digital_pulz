@@ -4,7 +4,17 @@ pharmacyModuleApp.controller('userController', function ($scope, $http) {
 
     //function for get all users in db
     var getUsers = function () {
-        $http.get('/users').then(function (response) {
+
+        var req = {
+            method: 'GET',
+            url: 'http://localhost:8000/api/users/',
+            headers: {
+                'x-access-token': undefined
+            }
+        }
+
+
+        $http(req).then(function (response) {
             $scope.user = response.data;
         });
     };
