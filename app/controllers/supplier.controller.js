@@ -1,9 +1,19 @@
 //supplier controller
 pharmacyModuleApp.controller('suppplierController', function ($scope, $http) {
 
-    //function for get all users in db
+    // //function for get all users in db
     // var getSuppliers = function () {
-    //     $http.get('/suppliers').then(function (response) {
+
+    //     var req = {
+    //         method: 'GET',
+    //         url: 'http://localhost:8000/api/suppliers/',
+    //         headers: {
+    //             'x-access-token': undefined
+    //         }
+    //     }
+
+
+    //     $http(req).then(function (response) {
     //         $scope.supplier = response.data;
     //     });
     // };

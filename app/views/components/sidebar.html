@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li ng-class="{ active: isCurrentPath('/add_supplier') }" ng-show={{a.firstName}}=='anuruddha'>
-                <a href="#!/add_supplier">
+                <a href="#!/supplier">
                     <i class="material-icons">group_add</i>
                     <p>Supplier</p>
                 </a>
@@ -52,6 +52,12 @@
                 <a href="#!/user">
                     <i class="material-icons">group</i>
                     <p>User</p>
+                </a>
+            </li>
+            <li ng-class="{ active: isCurrentPath('/prescription')}"}>
+                <a href="#!/prescription">
+                    <i class="material-icons">remove_red_eye</i>
+                    <p>Add Pecription</p>
                 </a>
             </li>
         </ul>

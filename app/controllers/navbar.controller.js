@@ -10,8 +10,9 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
             update_drugs: "Update Drugs",
             add_batch: "Add Batch",
             reports: "Generate Reports",
-            add_supplier : "Add Supplier",
-            view_requests : "View Requests"
+            supplier : "Add/Update/Delete Supplier",
+            view_requests : "View Requests",
+            prescription : "Add Prescriptions"
         };
 
         $scope.pageTitle = pageTitleItems[pageUrl];

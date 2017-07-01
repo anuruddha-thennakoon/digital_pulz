@@ -1,0 +1,71 @@
+<div class="row" ng-controller="">
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="card-header" data-background-color="purple">
+				<h4 class="title">Add Prescription</h4>
+				<p class="category">Prescription Info</p>
+			</div>
+			<div class="card-content">
+				<form class="w3-container">
+
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Patient Name</div>
+						<div class="w3-rest">
+							<input class="w3-input w3-border w3-rest" name="name" type="text" placeholder="Name">
+						</div>
+					</div>
+
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Date</div>
+						<div class="w3-col w3-third">
+							<input class="w3-input w3-border" name="date" type="date" placeholder="Prescribed Date">
+						</div>
+					</div>
+
+					<div class="w3-row w3-section">
+						<div class="w3-col" style="text-align: right">
+							<button class="w3-btn w3-green">Add</button>
+						</div>
+					</div>
+				</form>
+
+				<div class="space"></div>
+
+
+				<div class="row">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Patient Name</th>
+								<th>Prescribed Date</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Jill</td>
+								<td>2015.03.26</td>
+								<td>False</td>
+								<td><a href="#!/addItems">Add Items</a></td>
+								<!--<td><a ng-href="items/{{prescription._id}}">Open</a></td>-->
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!--<form class="w3-container">
+					
+
+                    <div class="w3-row w3-section">
+						<div class="w3-col" style="text-align: right">
+							<button class="w3-btn w3-green">Add Prescription</button>
+						</div>
+					</div>
+
+                    <div class="space"></div>
+                </form>-->
+			</div>
+		</div>
+	</div>
+</div>
