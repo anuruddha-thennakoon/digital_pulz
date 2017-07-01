@@ -14,6 +14,7 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
             view_requests : "View Requests",
             prescription : "Add Prescriptions",
             addItems : "Add Prescription Items"
+            
         };
 
         $scope.pageTitle = pageTitleItems[pageUrl];

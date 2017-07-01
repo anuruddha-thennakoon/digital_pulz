@@ -1,0 +1,133 @@
+
+
+<div class="col-md-12" ng-controller="orderController">
+    <div class="card">
+        <div class="card-header" data-background-color="red">
+				<h4 class="title">Place Order</h4>
+                    
+		</div>
+        <div class="card-content">
+           
+                  <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Sender Email</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border"  name="qty" ng-value="digitalpulz@gmail.com"  ng-model="newOrder.senderEmail">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Receiver Email</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" id="rec"type="email" placeholder="Receiver Email"  ng-model="newOrder.receiverEmail">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Supplier Name</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" id="sup" type="text" placeholder="Supplier Name"  ng-model="newOrder.supplierName">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Drug Name</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" id="dname" type="text" placeholder="Drug Name"  ng-model="newOrder.drugName">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Drug Type</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" id="dtype" type="text" placeholder="Drug Type"  ng-model="newOrder.drugType">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Quantity</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" id="qty" type="number" placeholder="Quantity"  ng-model="newOrder.orderQuantity">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Description</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty"  type="text" placeholder="Description"  ng-model="newOrder.description">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Date</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border"  id="orderDate" name="qty" type="date" placeholder="Date"  ng-model="newOrder.date">
+                    </div>
+                </div>
+
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col" style="text-align: right">
+                        <a onclick="mail()"><button class="w3-btn w3-green" ng-click="addOrder()">Place Order</button></a>
+                    </div>
+                </div>      
+
+                   
+            </div>
+
+
+           
+
+           
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+        <div class="card-header" data-background-color="purple">
+            <h4 class="title">Orders</h4>
+            
+        </div>
+        <div class="card-content">
+           
+
+                <table class="table table-striped" id="order_display">
+                        <thead>
+                            <tr>
+                                <th>Sender Email</th>
+                                <th>Receiver Email</th>
+                                <th>Supplier Name</th>
+                                <th>Drug Name</th>
+                                <th>Drug Type</th>
+                                <th>Quantity</th>
+                                <th>Description</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr ng-repeat="order in order">
+                                <td>{{order.senderEmail}}</td>
+                                <td>{{order.receiverEmail}}</td>
+                                <td>{{order.supplierName}}</td>
+                               <td>{{order.drugName}}</td>
+                                <td>{{order.drugType}}</td>
+                                 <td>{{order.orderQuantity}}</td>
+                               <td>{{order.description}}</td>
+                                <td>{{order.date}}</td>
+                              
+                            </tr>
+
+                            
+                           
+                        </tbody>
+                    </table>
+
+      
+        </div>
+    </div>
+</div>

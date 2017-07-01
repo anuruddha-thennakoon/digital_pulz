@@ -49,5 +49,9 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/add_items.html',
             controller: ''
         })
+        .when('/placeOrder', {
+            templateUrl: 'app/views/components/place_order.html',
+            controller: ''
+        })
 
 });
