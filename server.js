@@ -2,10 +2,17 @@
 
 const express = require('express');
 const app = express();
+const tk;
 
 app.use(express.static(__dirname));
 
 app.get('/', (req, res, next) => {
+    res.sendFile(__dirname + '/app/views/login.html');
+    //res.sendFile(__dirname + '/app/views/index.html');
+});
+
+app.get('/logged', (req, res, next) => {
+    //res.sendFile(__dirname + '/app/views/login.html');
     res.sendFile(__dirname + '/app/views/index.html');
 });
 

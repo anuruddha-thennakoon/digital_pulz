@@ -40,4 +40,5 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/user.html',
             controller: ''
         })
+        .otherwise({ redirectTo: '/' })
 });

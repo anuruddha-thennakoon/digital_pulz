@@ -9,15 +9,15 @@
 				<form class="w3-container">
 					<div class="w3-row w3-section">
 						<div class="w3-col m2">
-							<button class="w3-btn w3-dark-grey">Choose File</button>
-						</div>
-						<div class="w3-rest">
-							<p class="category" style="text-align: left">No file choosen</p>
+							<form id="uploadForm" enctype="multipart/form-data" action="upload" method="post">
+								<input type="file" name="file" class="w3-btn w3-dark-grey"/>Choose File								
+							</form>
 						</div>
 					</div>
 					<div class="w3-row w3-section">
 						<div class="w3-col" style="text-align: right">
-							<button class="w3-btn w3-green">Upload</button>
+							<input type="submit" value="Upload" name="submit" class="w3-btn w3-green">
+							<!-- <button class="w3-btn w3-green">Upload</button>-->
 						</div>
 					</div>
 				</form>
