@@ -1,12 +1,123 @@
-<div ng-controller="homeController">
+
+
+<div class="col-md-12" ng-controller="homeController">
     <div class="card">
+        <div class="card-header" data-background-color="purple">
+				<h4 class="title">Pharmacy Stock</h4>
+                    
+		</div>
         <div class="card-content">
-            <div class="row">
-                <h5>Home Page</h5>
-                <div class="alert alert-info">
-                    <span>{{message}}</span>
+            <div class="content-upper">
+                <!--Test-->
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Drug Name</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Drug Name"  ng-model="newStock.drugName">
+                    </div>
                 </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Unit Type</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Unit Type"  ng-model="newStock.unitType">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Drug Category</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Drug category"  ng-model="newStock.drugCategory">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Price</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Price"  ng-model="newStock.drugPrice">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col w3-quarter text-prop">Quantity</div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="qty" type="text" placeholder="Quantity"  ng-model="newStock.quantity">
+                    </div>
+                </div>
+
+                 <div class="w3-row w3-section">
+                    <div class="w3-col" style="text-align: right">
+                        <button class="w3-btn w3-green" ng-click="addStock()">Add to Stock</button>
+                    </div>
+                </div>
+
+                <!--End of test-->
+
+
+            <table class="table table-striped" id="stock_display">
+                        <thead>
+                            <tr>
+                                <th>Drug Name</th>
+                                <th>Unit Type</th>
+                                <th>Drug Category</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Request</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr ng-repeat="item in stock">
+                                <td>{{item.drugName}}</td>
+                                <td>{{item.unitType}}</td>
+                                <td>{{item.drugCategory}}</td>
+                               <td>{{item.drugPrice}}</td>
+                               <td>{{item.quantity}}</td>
+                               <td><button class=" btn-order">Order</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>Paracetamol</td>
+                                <td>Tab</td>
+                                <td>Narcotics</td>
+                                <td>23.50</td>
+                                <td>50</td>
+                                <td><button class=" btn-order">Order</button></td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+
+                   
             </div>
+
+<hr/>
+            <!--<div class="content-lower">
+                <table class="table table-striped">
+                    <thead>
+                         <tr>
+                                <th>Drug Name</th>
+                                <th>Unit Type</th>
+                                <th>Drug Category</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                               
+
+                            </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="drug in stock">
+                            <td>{{drug.drugName}}</td>
+                            <td>{{drug.unitType}}</td>
+                            <td>{{drug.drugCategory}}</td>
+                            <td>{{drug.price}}</td>
+                            <td>{{drug.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>-->
         </div>
     </div>
 </div>
