@@ -24,7 +24,7 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/add_batch.html',
             controller: ''
         })
-        .when('/add_supplier', {
+        .when('/supplier', {
             templateUrl: 'app/views/components/add_supplier.html',
             controller: ''
         })
@@ -40,5 +40,16 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/user.html',
             controller: ''
         })
+<<<<<<< HEAD
         .otherwise({ redirectTo: '/' })
+=======
+        .when('/prescription', {
+            templateUrl: 'app/views/components/add_prescriptions.html',
+            controller: ''
+        })
+        .when('/addItems', {
+            templateUrl: 'app/views/components/add_items.html',
+            controller: ''
+        })
+>>>>>>> 9d597b36e42fe2086a80a87b36da541e7a39d880
 });
