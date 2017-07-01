@@ -1,5 +1,6 @@
 //controller for register drugs
-pharmacyModuleApp.controller('addDrugsController', function ($scope) {
+pharmacyModuleApp.controller('addDrugsController', function ($scope,$http) {
+
    var getDrugs = function () {
         $http.get('http://localhost:8000/api/drugs').then(function (response) {
             $scope.drug = response.data;
@@ -16,4 +17,12 @@ pharmacyModuleApp.controller('addDrugsController', function ($scope) {
             $scope.newDrug = "";
         });
     };
+
+    $scope.upload=function(){
+        $http.post('/upload').then(function (response) {
+            console.log('adsdavdgasghvhavh');
+            console.log(response.data);
+        });
+    };
+
 });
