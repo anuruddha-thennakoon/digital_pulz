@@ -1,5 +1,4 @@
 // create the controller for sidebar
-
 pharmacyModuleApp.controller('sidebarController',function ($scope, $location,$http) {
       // var getUsers = function () {
       //   $http.get('/users').then(function (response) {
