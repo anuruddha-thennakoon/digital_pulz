@@ -5,6 +5,7 @@ pharmacyModuleApp.controller('suppplierController', function ($scope, $http) {
     var getSuppliers = function () {
         $http.get('http://localhost:8000/api/supplier').then(function (response) {
             $scope.supplier = response.data;
+            console.log( response.data);
         });
     };
 
