@@ -1,17 +1,4 @@
 // create the controller for sidebar
-
-<<<<<<< .mine
-pharmacyModuleApp.controller('sidebarController', ['$scope', '$location', function ($scope, $location) {
-
-
-    $scope.model = {};
-    $scope.model.data = {
-      "userRole": "chief"
-    };
-    
-
-
-=======
 pharmacyModuleApp.controller('sidebarController',function ($scope, $location,$http) {
       // var getUsers = function () {
       //   $http.get('/users').then(function (response) {
@@ -22,7 +9,6 @@ pharmacyModuleApp.controller('sidebarController',function ($scope, $location,$ht
 
       // getUsers();
 
->>>>>>> .theirs
     $scope.isCurrentPath = function (path) {
       return $location.path() == path;
     };
