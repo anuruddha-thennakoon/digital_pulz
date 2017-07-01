@@ -1,73 +1,168 @@
-<div class="row">
+<div class="row" ng-controller="suppplierController">
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header" data-background-color="purple">
-				<h4 class="title">Add Suppier</h4>
-				<p class="category">Complete the Form</p>
+				<h4 class="title">Add Supplier</h4>
+				<p class="category">Supplier Information</p>
 			</div>
 			<div class="card-content">
-				<form>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Company Name</label>
-								<input type="text" class="form-control" required>
-							</div>
-						</div>
-					</div>
+				<form class="w3-container">
+					<div class="w3-row">
 
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Description</label>
-								<input type="text" class="form-control">
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Company Name</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="company" type="text" placeholder="Company">
 							</div>
 						</div>
-					</div>
 
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Address</label>
-								<input type="text" class="form-control">
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Description</div>
+							<div class="w3-rest ">
+								<input class="w3-input w3-border" name="qty" type="text" placeholder="Description">
 							</div>
 						</div>
-					</div>
 
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Contact Person 1</label>
-								<input type="text" class="form-control">
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Address</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="address" type="text" placeholder="Address">
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Contact Number</label>
-								<input type="text" class="form-control">
-							</div>
-						</div>
-					</div>
 
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Contact Person 2</label>
-								<input type="text" class="form-control">
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Contact Person</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person">
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-group form-black label-floating is-empty">
-								<label class="control-label">Contact Number</label>
-								<input type="text" class="form-control">
-							</div>
-						</div>
-					</div>
 
-					<button type="submit" class="btn btn-primary pull-right">Add</button>
-					<div class="clearfix"></div>
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Contact Number</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col" style="text-align: right">
+								<button class="w3-btn w3-green">Add</button>
+							</div>
+						</div>
+
+
+
 				</form>
+
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
+	<div class="row" ng-controller="suppplierController">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header" data-background-color="purple">
+					<h4 class="title">View Supplier Information</h4>
+					<p class="category">Update/Delete Supplier Information</p>
+				</div>
+				<div class="card-content">
+					<!--<form class="w3-container">
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Search</div>
+						<div class="w3-rest">
+							<input class="w3-input w3-border" name="qty" type="text" placeholder="Search">
+						</div>
+					</div>
+				</form>-->
+
+					<div class="w3-container">
+						<table class="w3-table w3-striped">
+							<thead>
+								<tr>
+									<th>Company Name</th>
+									<th>Address</th>
+									<th>Description</th>
+									<th>Contact Person</th>
+									<th>Contact Number</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Jill</td>
+									<td>Smith</td>
+									<td>50</td>
+									<td>will smith</td>
+									<td>1234546</td>
+									<td><button data-toggle="w3-modal" data-target="#update" onclick="document.getElementById('id01').style.display='block'">Update</button></td>
+									<td><button>Delete</button></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div id="id01" class="w3-modal">
+							<div class="w3-modal-content">
+								<header class="w3-container" data-background-color="purple">
+									<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+									<h2>Update Supplier</h2>
+								</header>
+								<div class="w3-container">
+									<form class="w3-container">
+					<div class="w3-row">
+
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Company Name</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="company" type="text" placeholder="Company">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Description</div>
+							<div class="w3-rest ">
+								<input class="w3-input w3-border" name="qty" type="text" placeholder="Description">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Address</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="address" type="text" placeholder="Address">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Contact Person</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col w3-quarter text-prop">Contact Number</div>
+							<div class="w3-rest">
+								<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number">
+							</div>
+						</div>
+
+						<div class="w3-row w3-section">
+							<div class="w3-col" style="text-align: right">
+								<button class="w3-btn w3-green">Update</button>
+							</div>
+						</div>
+
+
+
+				</form>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
