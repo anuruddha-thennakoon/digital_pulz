@@ -1,32 +1,43 @@
 //supplier controller
 pharmacyModuleApp.controller('suppplierController', function ($scope, $http) {
 
-    // //function for get all users in db
+    //function for get all users in db
+    var getSuppliers = function () {
+
+        var req = {
+            method: 'GET',
+            url: 'http://localhost:8000/api/supplier/',
+            header: {
+                token : undefined
+            }
+            
+        }
+
+
+        $http(req).then(function (response) {
+            $scope.supplier = response.data;
+        });
+    };
     // var getSuppliers = function () {
-
-    //     var req = {
-    //         method: 'GET',
-    //         url: 'http://localhost:8000/api/suppliers/',
-    //         headers: {
-    //             'x-access-token': undefined
-    //         }
-    //     }
-
-
-    //     $http(req).then(function (response) {
+    //     $http.get('/suppliers').then(function (response) {
     //         $scope.supplier = response.data;
     //     });
     // };
 
-    // getSuppliers();
+    getSuppliers();
 
-    // //function for add new user
-    // $scope.addSupplier = function () {
-    //     $http.post('/suppliers', $scope.newSupplier).then(function (response) {
-    //         console.log(response.data);
-    //         $scope.newSupplier = "";
-    //     });
-    // };
+    //function for add new user
+    $scope.addSupplier = function () {
+        var req = {
+            method: 'POST',
+            url: 'http://localhost:8000/api/supplier/'
+            
+        }
+        $http(req, $scope.newSupplier).then(function (response) {
+            console.log(response.data);
+            $scope.newSupplier = "";
+        });
+    };
     
 
 });

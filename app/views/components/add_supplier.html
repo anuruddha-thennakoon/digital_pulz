@@ -12,41 +12,41 @@
 						<div class="w3-row w3-section">
 							<div class="w3-col w3-quarter text-prop">Company Name</div>
 							<div class="w3-rest">
-								<input class="w3-input w3-border" name="company" type="text" placeholder="Company">
+								<input class="w3-input w3-border" name="company" type="text" placeholder="Company" ng-model="newSupplier.companyName">
 							</div>
 						</div>
 
 						<div class="w3-row w3-section">
 							<div class="w3-col w3-quarter text-prop">Description</div>
 							<div class="w3-rest ">
-								<input class="w3-input w3-border" name="qty" type="text" placeholder="Description">
+								<input class="w3-input w3-border" name="qty" type="text" placeholder="Description" ng-model="newSupplier.description">
 							</div>
 						</div>
 
 						<div class="w3-row w3-section">
 							<div class="w3-col w3-quarter text-prop">Address</div>
 							<div class="w3-rest">
-								<input class="w3-input w3-border" name="address" type="text" placeholder="Address">
+								<input class="w3-input w3-border" name="address" type="text" placeholder="Address" ng-model="newSupplier.address">
 							</div>
 						</div>
 
 						<div class="w3-row w3-section">
 							<div class="w3-col w3-quarter text-prop">Contact Person</div>
 							<div class="w3-rest">
-								<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person">
+								<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person" ng-model="newSupplier.contactPerson"> 
 							</div>
 						</div>
 
 						<div class="w3-row w3-section">
 							<div class="w3-col w3-quarter text-prop">Contact Number</div>
 							<div class="w3-rest">
-								<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number">
+								<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number" ng-model="newSupplier.contactNumber">
 							</div>
 						</div>
 
 						<div class="w3-row w3-section">
 							<div class="w3-col" style="text-align: right">
-								<button class="w3-btn w3-green">Add</button>
+								<button class="w3-btn w3-green" ng-click="addSupplier()">Add</button>
 							</div>
 						</div>
 
@@ -89,12 +89,21 @@
 								</tr>
 							</thead>
 							<tbody>
+								<tr ng-repeat="supplier in supplier">
+									<td>{{supplier.companyName}}</td>
+									<td>{{supplier.description}}</td>
+									<td>{{supplier.address}}</td>
+									<td>{{supplier.contactPerson}}</td>
+									<td>{{supplier.contactNumber}}</td>
+									<td><button class="w3-btn w3-green" data-toggle="w3-modal" data-target="#update" onclick="document.getElementById('id01').style.display='block'">Update</button></td>
+									<td><button class="w3-btn w3-green" >Delete</button></td>
+								</tr>
 								<tr>
-									<td>Jill</td>
-									<td>Smith</td>
-									<td>50</td>
-									<td>will smith</td>
-									<td>1234546</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>d</td>
+									<td>e</td>
 									<td><button class="w3-btn w3-green" data-toggle="w3-modal" data-target="#update" onclick="document.getElementById('id01').style.display='block'">Update</button></td>
 									<td><button class="w3-btn w3-green" >Delete</button></td>
 								</tr>
@@ -109,60 +118,60 @@
 								</header>
 								<div class="w3-container">
 									<form class="w3-container">
-					<div class="w3-row">
+										<div class="w3-row">
 
-						<div class="w3-row w3-section">
-							<div class="w3-col w3-quarter text-prop">Company Name</div>
-							<div class="w3-rest">
-								<input class="w3-input w3-border" name="company" type="text" placeholder="Company">
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col w3-quarter text-prop">Company Name</div>
+												<div class="w3-rest">
+													<input class="w3-input w3-border" name="company" type="text" placeholder="Company">
+												</div>
+											</div>
 
-						<div class="w3-row w3-section">
-							<div class="w3-col w3-quarter text-prop">Description</div>
-							<div class="w3-rest ">
-								<input class="w3-input w3-border" name="qty" type="text" placeholder="Description">
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col w3-quarter text-prop">Description</div>
+												<div class="w3-rest ">
+													<input class="w3-input w3-border" name="qty" type="text" placeholder="Description">
+												</div>
+											</div>
 
-						<div class="w3-row w3-section">
-							<div class="w3-col w3-quarter text-prop">Address</div>
-							<div class="w3-rest">
-								<input class="w3-input w3-border" name="address" type="text" placeholder="Address">
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col w3-quarter text-prop">Address</div>
+												<div class="w3-rest">
+													<input class="w3-input w3-border" name="address" type="text" placeholder="Address">
+												</div>
+											</div>
 
-						<div class="w3-row w3-section">
-							<div class="w3-col w3-quarter text-prop">Contact Person</div>
-							<div class="w3-rest">
-								<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person">
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col w3-quarter text-prop">Contact Person</div>
+												<div class="w3-rest">
+													<input class="w3-input w3-border" name="person" type="text" placeholder="Contact Person">
+												</div>
+											</div>
 
-						<div class="w3-row w3-section">
-							<div class="w3-col w3-quarter text-prop">Contact Number</div>
-							<div class="w3-rest">
-								<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number">
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col w3-quarter text-prop">Contact Number</div>
+												<div class="w3-rest">
+													<input class="w3-input w3-border" name="number" type="text" placeholder="Contact Number">
+												</div>
+											</div>
 
-						<div class="w3-row w3-section">
-							<div class="w3-col" style="text-align: right">
-								<button class="w3-btn w3-green">Update</button>
-							</div>
-						</div>
+											<div class="w3-row w3-section">
+												<div class="w3-col" style="text-align: right">
+													<button class="w3-btn w3-green">Update</button>
+												</div>
+											</div>
 
 
 
-				</form>
+									</form>
+									</div>
 								</div>
 							</div>
+
 						</div>
 
+
 					</div>
-
-
 				</div>
 			</div>
 		</div>
-	</div>

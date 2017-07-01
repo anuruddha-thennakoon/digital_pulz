@@ -1,5 +1,9 @@
 
+//supplier controller
+pharmacyModuleApp.controller('prescriptionController', function ($scope, $http) {
 
+
+});
 
 
 

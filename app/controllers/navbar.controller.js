@@ -12,7 +12,8 @@ pharmacyModuleApp.controller('navbarController', function ($scope,$location) {
             reports: "Generate Reports",
             supplier : "Add/Update/Delete Supplier",
             view_requests : "View Requests",
-            prescription : "Add Prescriptions"
+            prescription : "Add Prescriptions",
+            addItems : "Add Prescription Items"
         };
 
         $scope.pageTitle = pageTitleItems[pageUrl];
