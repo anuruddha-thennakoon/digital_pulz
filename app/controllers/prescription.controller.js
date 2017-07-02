@@ -2,6 +2,23 @@
 //supplier controller
 pharmacyModuleApp.controller('prescriptionController', function ($scope, $http) {
 
+    var getPrescription = function () {
+        $http.get('http://localhost:8000/api/prescription').then(function (response) {
+            $scope.prescription = response.data;
+            console.log( response.data);
+        });
+    };
+
+    getPrescription();
+
+    //function for add new user
+    $scope.addPrescription = function () {
+        $http.post('http://localhost:8000/api/prescription', $scope.newPrescription).then(function (response) {
+            console.log(response.data);
+            $scope.newPrescription = "";
+            getPrescription();
+        });
+    };
 
 });
 
