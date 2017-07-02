@@ -1,6 +1,6 @@
 //controller for home
 pharmacyModuleApp.controller('homeController', function ($scope,$http) {
-    var arr;
+    
      var getStock = function () {
           
 
@@ -8,11 +8,12 @@ pharmacyModuleApp.controller('homeController', function ($scope,$http) {
         $http.get('http://localhost:8000/api/stock').then(function (response) {
             $scope.stock = response.data;
             console.log( response.data);
-            arr=
+            
         });
         
         
      }
+
     getStock();
 
 
@@ -31,19 +32,13 @@ var getDanger = function () {
 
 
 
-
-
-    //     $('#stock_display').DataTable( {
-
-            
-    //     dom: 'Bfrtip',
-    //     buttons: [
-    //         'pdfHtml5'
-    //     ]
-    // } );
-
-     
-    
+$('.btn-pdf').click(function(){
+    var doc = new jsPDF('p', 'pt');
+var elem = document.getElementById("stock_display");
+var res = doc.autoTableHtmlToJson(elem);
+doc.autoTable(res.columns, res.data);
+doc.save("table.pdf");
+});
     
 
 

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-controller='addBatchController'>
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header" data-background-color="purple">
@@ -10,7 +10,7 @@
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Drug Category</div>
 						<div class="w3-rest">
-							<select>
+							<select ng-model="newBatch.drugCategory">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -24,7 +24,7 @@
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Drug Name</div>
 						<div class="w3-rest">
-							<select>
+							<select ng-model="newBatch.drugName">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -38,7 +38,7 @@
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Type</div>
 						<div class="w3-rest">
-							<select>
+							<select ng-model="newBatch.drugType">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -52,7 +52,7 @@
 					<div class="w3-row">
 						<div class="w3-col w3-quarter text-prop">Content</div>
 						<div class="w3-rest">
-							<select>
+							<select ng-model="newBatch.content">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -64,39 +64,36 @@
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Batch Number</div>
 						<div class="w3-col w3-third">
-							<input class="w3-input w3-border" name="batch_number" type="text" placeholder="Batch Number">
+							<input class="w3-input w3-border" name="batch_number" type="text" placeholder="Batch Number" ng-model="newBatch.batchNumber">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Quantity</div>
 						<div class="w3-col w3-third">
-							<input class="w3-input w3-border" name="qty" type="text" placeholder="Quantity">
+							<input class="w3-input w3-border" name="qty" type="text" placeholder="Quantity" ng-model="newBatch.qty">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Manufacure Date</div>
 						<div class="w3-col w3-third">
-							<input class="w3-input w3-border" name="qty" type="date" placeholder="Quantity">
+							<input class="w3-input w3-border" name="qty" type="date"  ng-model="newBatch.mfd">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Expire Date</div>
 						<div class="w3-col w3-third">
-							<input class="w3-input w3-border" name="qty" type="date" placeholder="Quantity">
+							<input class="w3-input w3-border" name="qty" type="date"  ng-model="newBatch.expd">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col" style="text-align: right">
-							<button class="w3-btn w3-green">Update</button>
+							<button class="w3-btn w3-green" ng-click="addBatch(newBatch)">Update</button>
 						</div>
 					</div>
-
-
-
 				</form>
 
 			</div>
@@ -104,7 +101,7 @@
 	</div>
 </div>
 
-<div class="row">
+<div class="row" ng-controller='addBatchController'>
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header" data-background-color="purple">
@@ -128,21 +125,12 @@
 							<th>Drug Category</th>
 							<th>Drug Name</th>
 						</tr>
-						<tr>
-							<td>Jill</td>
-							<td>Smith</td>
-							<td>50</td>
+						<tr ng-repeat="batch in batch">
+							<td>{{batch.batchNumber}}</td>
+							<td>{{batch.drugCategory}}</td>
+							<td>{{batch.drugName}}</td>
 						</tr>
-						<tr>
-							<td>Eve</td>
-							<td>Jackson</td>
-							<td>94</td>
-						</tr>
-						<tr>
-							<td>Adam</td>
-							<td>Johnson</td>
-							<td>67</td>
-						</tr>
+
 					</table>
 				</div>
 
