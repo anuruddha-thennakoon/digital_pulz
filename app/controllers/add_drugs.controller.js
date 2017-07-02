@@ -8,11 +8,12 @@ pharmacyModuleApp.controller('addDrugsController', function ($scope,$http) {
         });
     };
 
-    getDrugs();
+    //getDrugs();
 
     //function for add new user
-    $scope.addDrugs = function () {
-        $http.post('http://localhost:8000/api/drugs', $scope.newDrug).then(function (response) {
+    $scope.addDrugs = function (newDrug) {
+        $http.post('http://localhost:8000/api/drugs', newDrug).then(function (response) {
+            console.log('add drugs function');
             console.log(response.data);
             $scope.newDrug = "";
         });
@@ -20,7 +21,7 @@ pharmacyModuleApp.controller('addDrugsController', function ($scope,$http) {
 
     $scope.upload=function(){
         $http.post('/upload').then(function (response) {
-            console.log('adsdavdgasghvhavh');
+            console.log('file upload function');
             console.log(response.data);
         });
     };
