@@ -40,12 +40,11 @@ pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/components/user.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/' })
         .when('/prescription', {
             templateUrl: 'app/views/components/add_prescriptions.html',
             controller: ''
         })
-        .when('/addItems', {
+        .when('/addItems/:id', {
             templateUrl: 'app/views/components/add_items.html',
             controller: ''
         })
