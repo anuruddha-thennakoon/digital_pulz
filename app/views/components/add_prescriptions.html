@@ -1,4 +1,4 @@
-<div class="row" ng-controller="prescriptionController">
+<div class="row" ng-controller="prescriptionController" >
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header" data-background-color="purple">
@@ -11,20 +11,27 @@
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Patient Name</div>
 						<div class="w3-rest">
-							<input class="w3-input w3-border w3-rest" name="name" type="text" placeholder="Name">
+							<input class="w3-input w3-border w3-rest" name="name" type="text" placeholder="Patient" ng-model="newPrescription.patientName">
+						</div>
+					</div>
+
+					<div class="w3-row w3-section">
+						<div class="w3-col w3-quarter text-prop">Doctor Name</div>
+						<div class="w3-rest">
+							<input class="w3-input w3-border w3-rest" name="name" type="text" placeholder="Doctor" ng-model="newPrescription.doctorName">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col w3-quarter text-prop">Date</div>
-						<div class="w3-col w3-third">
-							<input class="w3-input w3-border" name="date" type="date" placeholder="Prescribed Date">
+						<div class="w3-rest">
+							<input class="w3-input w3-border w3-rest" id="date" name="name" type="date" placeholder="date" ng-model="newPrescription.prescribedDate">
 						</div>
 					</div>
 
 					<div class="w3-row w3-section">
 						<div class="w3-col" style="text-align: right">
-							<button class="w3-btn w3-green">Add</button>
+							<button class="w3-btn w3-green" ng-click="addPrescription()">Add</button>
 						</div>
 					</div>
 				</form>
@@ -37,17 +44,19 @@
 						<thead>
 							<tr>
 								<th>Patient Name</th>
+								<th>Doctor</th>
 								<th>Prescribed Date</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Jill</td>
-								<td>2015.03.26</td>
-								<td>False</td>
-								<td><a href="#!/addItems"><button class="w3-btn w3-green">Add Item</button></a></td>
+							<tr ng-repeat="prescription in prescription">
+								<td>{{prescription.patientName}}</td>
+								<td>{{prescription.doctorName}}</td>
+								<td>{{prescription.prescribedDate}}</td>
+								<td>{{prescription.status}}</td>
+								<td><a href="#!/addItems/{{prescription._id}}"><button class="w3-btn w3-green">Add Item</button></a></td>
 								<!--<td><a ng-href="items/{{prescription._id}}">Open</a></td>-->
 							</tr>
 						</tbody>

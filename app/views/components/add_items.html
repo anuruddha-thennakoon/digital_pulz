@@ -1,4 +1,4 @@
-<div class="row" ng-controller="prescriptionController">
+<div class="row" ng-controller="itemController">
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" data-background-color="purple">
@@ -22,28 +22,28 @@
                         <div class="collapse" id="collapseExample" aria-expanded="false">
                             <br/>
                             <div class="col-md-2">
-                                <input class="w3-input w3-border w3-rest" name="name" type="text" placeholder="Drug Name">
+                                <input class="w3-input w3-border w3-rest"  type="text" placeholder="Drug Name" ng-model="newItem.drugName">
                             </div>
 
                             <div class="col-md-2">
-                                <input class="w3-input w3-border w3-rest" name="qty" type="text" placeholder="Qty">
+                                <input class="w3-input w3-border w3-rest" type="text" placeholder="Qty" ng-model="newItem.quantity">
                             </div>
 
                             <div class="col-md-2">
-                                <input class="w3-input w3-border w3-rest" name="dose" type="text" placeholder="Dose">
+                                <input class="w3-input w3-border w3-rest" type="text" placeholder="Dose" ng-model="newItem.dose">
                             </div>
 
                             <div class="col-md-2">
-                                <input class="w3-input w3-border w3-rest" name="period" type="text" placeholder="Period">
+                                <input class="w3-input w3-border w3-rest"  type="text" placeholder="Period" ng-model="newItem.period">
                             </div>
 
                             <div class="col-md-2">
-                                <input class="w3-input w3-border w3-rest" name="frequency" type="text" placeholder="Frequency">
+                                <input class="w3-input w3-border w3-rest"  type="text" placeholder="Frequency" ng-model="newItem.frequency">
                             </div>
 
                             <div class="col-md-2">
                                 <div class="w3-col" style="text-align: right">
-                                    <button class="w3-btn w3-green pull-right">Add Item</button>
+                                    <button class="w3-btn w3-green pull-right" ng-click="addPrescriptionItems(prescription._id)">Add Item</button>
                                 </div>
                             </div>
                         </div>
@@ -63,12 +63,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>as</td>
-                                    <td>as</td>
-                                    <td>as</td>
-                                    <td>as</td>
-                                    <td>as</td>
+                                <tr ng-repeat="prescriptionItem in prescriptionItem">
+                                    <td>{{prescriptionItem.drugName}}</td>
+                                    <td>{{prescriptionItem.quantity}}</td>
+                                    <td>{{prescriptionItem.dose}}</td>
+                                    <td>{{prescriptionItem.period}}</td>
+                                    <td>{{prescriptionItem.frequency}}</td>
                                     <td><button class="w3-btn w3-green">Delete</button></td>
 
                                     <!--<tr ng-repeat="driver in drivers">
@@ -79,7 +79,14 @@
                                 <td>{{item.vehicle}}</td>
                                 <td><a ng-href="comments/{{driver._id}}">Open</a></td>
                             </tr>-->
-                                <tr>
+                                </tr>
+                                    <td>panadol</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                    <td>2 weeks</td>
+                                    <td>8hrs</td>
+                                    <td><button class="w3-btn w3-green">Delete</button></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
