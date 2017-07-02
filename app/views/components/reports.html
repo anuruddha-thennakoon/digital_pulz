@@ -1,61 +1,117 @@
-<div class="row">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header card-chart" data-background-color="orange">
-                <div class="ct-chart" id="dailySalesChart"></div>
-            </div>
-            <div class="card-content">
-                <h5 class="title">Drugs To Be Expired(in 90 days) <i class="material-icons">delete</i> </h5>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <a href="#" onclick="demo.showNotification('top','right')">
-                    Generate Report
-				</a>
-                </div>
+<div class="row" ng-controller="reportsController">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header" data-background-color="orange">
+					<h4 class="title">Drug Report</h4>
+					<p class="category">Drugs on Re-order level</p>
+				</div>
+				<div class="card-content">
+					<div class="w3-container">
+						<table class="table table-striped" id="stock_display">
+							<thead>
+								<tr>
+									<th>Drug Name</th>
+									<th>Type</th>
+									<th>Category</th>
+									<th>Quantity</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="reorder in reorder">
+									<td>{{reorder.drugName}}</td>
+									<td>{{reorder.drugType}}</td>
+									<td>{{reorder.drugCategory}}</td>
+									<td>{{reorder.quantity}}</td>
+									<td>{{reorder.drugPrice}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Panadol</td>
+									<td>Pills</td>
+									<td>Pain killer</td>
+									<td>5</td>
+									<td>rs.2.5</td>
+								</tr>
+                                <tr>
+                                    <td>Digene</td>
+									<td>Pills</td>
+									<td>Stomach</td>
+									<td>8</td>
+									<td>rs.2</td>
+								</tr>
+							</tbody>
+						</table>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header card-chart" data-background-color="green">
-                <div class="ct-chart" id="dailySalesChart"></div>
-            </div>
-            <div class="card-content">
-                <h5 class="title">Drugs on Re-order Level <i class="material-icons">add_alert</i></h5>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <a href="#" onclick="demo.showNotification('top','right')">
-                    Generate Report
-				</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header card-chart" data-background-color="red">
-                <div class="ct-chart" id="dailySalesChart"></div>
-            </div>
-            <div class="card-content">
-                <h5 class="title">Drugs on Danger Level <i class="material-icons">warning</i></h5>
-                <!--<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>-->
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <a href="#" onclick="demo.showNotification('top','right')">
-                    Generate Report
-				</a>
-                </div>
-            </div>
-        </div>
+                        <button class="btn btn-pdf" >View Pdf</button>
+						
+                        </div>
 
 
-    </div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-</div>
+        
+
+<div class="row" ng-controller="reportsController">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header" data-background-color="Red">
+					<h4 class="title">Drug Report</h4>
+					<p class="category">Drugs on Danger level</p>
+				</div>
+				<div class="card-content">
+					<div class="w3-container">
+						<table class="table table-striped" id="stock_display">
+							<thead>
+								<tr>
+									<th>Drug Name</th>
+									<th>Type</th>
+									<th>Category</th>
+									<th>Quantity</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="reorder in reorder">
+									<td>{{reorder.drugName}}</td>
+									<td>{{reorder.drugType}}</td>
+									<td>{{reorder.drugCategory}}</td>
+									<td>{{reorder.quantity}}</td>
+									<td>{{reorder.drugPrice}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Paracetamol</td>
+									<td>Pills</td>
+									<td>Category</td>
+									<td>5</td>
+									<td>rs.2.5</td>
+								</tr>
+                                <tr>
+                                    <td>Cetirisin</td>
+									<td>Pills</td>
+									<td>Nasal</td>
+									<td>4</td>
+									<td>rs.20</td>
+								</tr>
+                                <tr>
+                                    <td>Amoxilin</td>
+									<td>Tablets</td>
+									<td>Antibiotic</td>
+									<td>8</td>
+									<td>rs.35</td>
+								</tr> 
+							
+							</tbody>
+						</table>
+                        
+                        <button class="btn btn-pdf" >View Pdf</button>
+						
+                        </div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>

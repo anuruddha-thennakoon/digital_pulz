@@ -11,7 +11,7 @@ pharmacyModuleApp.controller('prescriptionController', function ($scope, $http) 
 
     getPrescription();
 
-    //function for add new user
+    //function for add new pres
     $scope.addPrescription = function () {
         $http.post('http://localhost:8000/api/prescription', $scope.newPrescription).then(function (response) {
             console.log(response.data);
