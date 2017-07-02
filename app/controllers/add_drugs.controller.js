@@ -1,5 +1,6 @@
 //controller for register drugs
-pharmacyModuleApp.controller('addDrugsController', function ($scope) {
+pharmacyModuleApp.controller('addDrugsController', function ($scope,$http) {
+
    var getDrugs = function () {
         $http.get('http://localhost:8000/api/drugs').then(function (response) {
             $scope.drug = response.data;
@@ -7,13 +8,22 @@ pharmacyModuleApp.controller('addDrugsController', function ($scope) {
         });
     };
 
-    getDrugs();
+    //getDrugs();
 
     //function for add new user
-    $scope.addDrugs = function () {
-        $http.post('http://localhost:8000/api/drugs', $scope.newDrug).then(function (response) {
+    $scope.addDrugs = function (newDrug) {
+        $http.post('http://localhost:8000/api/drugs', newDrug).then(function (response) {
+            console.log('add drugs function');
             console.log(response.data);
             $scope.newDrug = "";
         });
     };
+
+    $scope.upload=function(){
+        $http.post('/upload').then(function (response) {
+            console.log('file upload function');
+            console.log(response.data);
+        });
+    };
+
 });

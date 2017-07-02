@@ -1,103 +1,101 @@
-
-
-<div class="col-md-12" ng-controller="homeController">
+<div ng-controller="homeController">
     <div class="card">
         <div class="card-header" data-background-color="purple">
-				<h4 class="title">Out of Stock</h4>
-                    
-		</div>
+            <h4 class="title">Out of Stock</h4>
+
+        </div>
         <div class="card-content">
             <div class="content-upper">
                 <!--Test-->
-                
+
                 <!--End of test-->
 
 
-            <table class="table table-striped" id="stock_display">
-                        <thead>
-                            <tr>
-                                <th>Drug Name</th>
-                                <th>Unit Type</th>
-                                <th>Drug Category</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Request</th>
-                            </tr>
-                        </thead>
+                <table class="table table-striped" id="stock_display">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Unit Type</th>
+                            <th>Drug Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Request</th>
+                        </tr>
+                    </thead>
 
-                        <tbody>
-                            <tr ng-repeat="item in danger">
-                                <td>{{item.drugName}}</td>
-                                <td>{{item.drugType}}</td>
-                                <td>{{item.drugCategory}}</td>
-                               <td>{{item.drugPrice}}</td>
-                               <td>{{item.quantity}}</td>
-                               <td><a href="#!/placeOrder"><button class=" btn-order">Order</button></a></td>
-                            </tr>
+                    <tbody>
+                        <tr ng-repeat="item in danger">
+                            <td>{{item.drugName}}</td>
+                            <td>{{item.drugType}}</td>
+                            <td>{{item.drugCategory}}</td>
+                            <td>{{item.drugPrice}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td><a href="#!/placeOrder"><button class=" btn-order">Order</button></a></td>
+                        </tr>
 
-                            
-                           
-                        </tbody>
-                    </table>
 
-                   
-            </div>
 
-<hr/>
-           
+                    </tbody>
+                </table>
+
 
             </div>
+
+            <hr/>
+
+
         </div>
     </div>
+</div>
 
 
 
-     <div class="card">
-        <div class="card-header" data-background-color="purple">
-				<h4 class="title">Pharmacy Stock</h4>
-                    
-		</div>
-        <div class="card-content">
-            <div class="content-upper">
-                <!--Test-->
-                
-                <!--End of test-->
+<div class="card">
+    <div class="card-header" data-background-color="purple">
+        <h4 class="title">Pharmacy Stock</h4>
+
+    </div>
+    <div class="card-content">
+        <div class="content-upper">
+            <!--Test-->
+
+            <!--End of test-->
 
 
             <table class="table table-striped" id="stock_display">
-                        <thead>
-                            <tr>
-                                <th>Drug Name</th>
-                                <th>Unit Type</th>
-                                <th>Drug Category</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                
-                            </tr>
-                        </thead>
+                <thead>
+                    <tr>
+                        <th>Drug Name</th>
+                        <th>Unit Type</th>
+                        <th>Drug Category</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
 
-                        <tbody>
-                            <tr ng-repeat="item in stock">
-                                <td>{{item.drugName}}</td>
-                                <td>{{item.drugType}}</td>
-                                <td>{{item.drugCategory}}</td>
-                               <td>{{item.drugPrice}}</td>
-                               <td>{{item.quantity}}</td>
-                             
-                            </tr>
+                    </tr>
+                </thead>
 
-                            
-                           
-                        </tbody>
-                    </table>
+                <tbody>
+                    <tr ng-repeat="item in stock">
+                        <td>{{item.drugName}}</td>
+                        <td>{{item.drugType}}</td>
+                        <td>{{item.drugCategory}}</td>
+                        <td>{{item.drugPrice}}</td>
+                        <td>{{item.quantity}}</td>
 
-                   
-            </div>
+                    </tr>
 
-<hr/>
-           
 
-            </div>
+
+                </tbody>
+            </table>
+
+
         </div>
+
+        <hr/>
+
+
     </div>
+</div>
+</div>
 </div>

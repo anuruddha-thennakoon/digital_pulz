@@ -1,5 +1,5 @@
 //create module
-var pharmacyModuleApp = angular.module('pharmacyModuleApp', ['ngRoute']);
+var pharmacyModuleApp = angular.module('pharmacyModuleApp', ['ngRoute','ngCookies']);
 
 // configure our routes
 pharmacyModuleApp.config(function ($routeProvider, $locationProvider) {
