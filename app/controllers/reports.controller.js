@@ -28,4 +28,12 @@ pharmacyModuleApp.controller('reportsController', function ($scope, $http) {
         doc.save("table.pdf");
     });
 
+     $('.btn-pdf2').click(function () {
+        var doc = new jsPDF('p', 'pt');
+        var elem = document.getElementById("stock_display2");
+        var res = doc.autoTableHtmlToJson(elem);
+        doc.autoTable(res.columns, res.data);
+        doc.save("table.pdf");
+    });
+
 });
