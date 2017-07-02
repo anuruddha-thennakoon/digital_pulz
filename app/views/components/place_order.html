@@ -8,12 +8,7 @@
 		</div>
         <div class="card-content">
            
-                  <div class="w3-row w3-section">
-                    <div class="w3-col w3-quarter text-prop">Sender Email</div>
-                    <div class="w3-rest">
-                        <input class="w3-input w3-border"  name="qty" ng-value="digitalpulz@gmail.com"  ng-model="newOrder.senderEmail">
-                    </div>
-                </div>
+                  
 
                  <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Receiver Email</div>
@@ -25,21 +20,36 @@
                  <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Supplier Name</div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border" name="qty" id="sup" type="text" placeholder="Supplier Name"  ng-model="newOrder.supplierName">
+                        <select id="sup" ng-model="newOrder.supplierName">
+                            <option>Select</option>
+
+                            <option ng-repeat="sup in supplier" >{{sup.companyName}}</option>
+                        </select>
+                        <!--<input class="w3-input w3-border" name="qty" id="sup" type="text" placeholder="Supplier Name"  ng-model="newOrder.supplierName">-->
                     </div>
                 </div>
 
                  <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Drug Name</div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border" name="qty" id="dname" type="text" placeholder="Drug Name"  ng-model="newOrder.drugName">
+                        <!--<input class="w3-input w3-border" name="qty" id="dname" type="text" placeholder="Drug Name"  ng-model="newOrder.drugName">-->
+                        <select id="dname" ng-model="newOrder.drugName">
+                            <option>Select</option>
+                            <option ng-repeat="drug in stock">{{drug.drugName}}</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Drug Type</div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border" name="qty" id="dtype" type="text" placeholder="Drug Type"  ng-model="newOrder.drugType">
+                        <!--<input class="w3-input w3-border" name="qty" id="dtype" type="text" placeholder="Drug Type"  ng-model="newOrder.drugType">-->
+                        <select id="dtype" ng-model="newOrder.drugType" >
+                            <option>Select</option>
+                            <option>Tab</option>
+                            <option>Cap</option>
+                            <option>Spray</option>
+                        </select>
                     </div>
                 </div>
 
@@ -60,14 +70,14 @@
                 <div class="w3-row w3-section">
                     <div class="w3-col w3-quarter text-prop">Date</div>
                     <div class="w3-rest">
-                        <input class="w3-input w3-border"  id="orderDate" name="qty" type="date" placeholder="Date"  ng-model="newOrder.date">
+                        <input class="w3-input w3-border"  id="orderDate" name="qty" id="date" type="date"  ng-model="newOrder.date">
                     </div>
                 </div>
 
 
                  <div class="w3-row w3-section">
                     <div class="w3-col" style="text-align: right">
-                        <a onclick="mail()"><button class="w3-btn w3-green" ng-click="addOrder()">Place Order</button></a>
+                        <a ><button class="w3-btn w3-green" ng-click="addOrder()">Place Order</button></a>
                     </div>
                 </div>      
 
@@ -98,7 +108,7 @@
                 <table class="table table-striped" id="order_display">
                         <thead>
                             <tr>
-                                <th>Sender Email</th>
+                                
                                 <th>Receiver Email</th>
                                 <th>Supplier Name</th>
                                 <th>Drug Name</th>
@@ -111,7 +121,7 @@
 
                         <tbody>
                             <tr ng-repeat="order in order">
-                                <td>{{order.senderEmail}}</td>
+                                
                                 <td>{{order.receiverEmail}}</td>
                                 <td>{{order.supplierName}}</td>
                                <td>{{order.drugName}}</td>

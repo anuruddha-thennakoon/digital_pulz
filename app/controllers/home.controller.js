@@ -1,6 +1,6 @@
 //controller for home
 pharmacyModuleApp.controller('homeController', function ($scope,$http) {
-    
+    var arr;
      var getStock = function () {
           
 
@@ -8,8 +8,9 @@ pharmacyModuleApp.controller('homeController', function ($scope,$http) {
         $http.get('http://localhost:8000/api/stock').then(function (response) {
             $scope.stock = response.data;
             console.log( response.data);
+            arr=
         });
-
+        
         
      }
     getStock();
@@ -27,6 +28,7 @@ var getDanger = function () {
         
      }
     getDanger();
+
 
 
 

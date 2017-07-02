@@ -1,6 +1,15 @@
 //controller for home
 pharmacyModuleApp.controller('orderController', function ($scope,$http) {
-    
+     //$scope.newOrder.senderEmail = 'digitalpulz@gmail.com';
+
+    // function getDate(){
+//  var currentdate = new Date();
+
+// $('#date').val($.datepicker.formatDate('dd-M-y', currentdate));
+// } 
+
+// getDate();
+
      var getOrder = function () {
           
 
@@ -13,6 +22,28 @@ pharmacyModuleApp.controller('orderController', function ($scope,$http) {
         
      }
     getOrder();
+
+    var getSuppliers = function () {
+        $http.get('http://localhost:8000/api/supplier').then(function (response) {
+            $scope.supplier = response.data;
+            console.log( response.data);
+        });
+    };
+getSuppliers();
+
+
+ var getStock = function () {
+          
+
+
+        $http.get('http://localhost:8000/api/stock').then(function (response) {
+            $scope.stock = response.data;
+            console.log( response.data);
+        });
+
+        
+     }
+    getStock();
 
 
 $scope.addOrder = function () {
