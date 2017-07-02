@@ -11,7 +11,7 @@ pharmacyModuleApp.controller('itemController', function ($scope, $http, $routePa
 
     //function for add new user
     $scope.addItem = function () {
-        $http.post('http://localhost:8000/api/item'+ id, $scope.newItem).then(function (response) {
+        $http.post('http://localhost:8000/api/item', $scope.newItem).then(function (response) {
             console.log(response.data);
             $scope.newItem = "";
             findItem();
